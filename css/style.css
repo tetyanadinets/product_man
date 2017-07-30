@@ -64,10 +64,11 @@ body{
 }
 .ba-box-shadow-menu:hover:before{
 	background: #e10011;
-  box-shadow:
+	box-shadow:
   	0 0.25em 0 0 #e10011,
     0 0.5em 0 0 #e10011;
 }
+
 
 /*Section*/
 
@@ -112,10 +113,68 @@ body{
 	background-color: #e10011;
 }
 
+
+/*Section_2*/
+
+.ba-container__white{
+	background-color: #FFF;
+	padding: 110px 70px 70px;
+}
+.ba-section__title{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 48px;
+	margin: 0;
+}
+.ba-section__star{
+	text-align: center;
+	color: #5c5c5c;
+	font-size: 18px;
+}
+
+.ba-section__star:before, .ba-section__star:after{
+	content: "〰〰〰〰";
+	color: #5c5c5c;
+}
+.ba-section__text{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	color: #303030;
+	max-width: 585px;
+	margin: 0 auto 70px;
+}
+
+.ba-row_custom > [class*="ba-width-"] {
+    padding: 16px;
+}
+.ba-row_custom{
+	margin-left: 0;
+}
+.ba-section__product_item{
+	position: relative;
+}
+.ba-section__product_item:before{
+	content: "";
+	position: absolute;
+	background-color: #e10011;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	display: block;
+}
+.ba-section__product_item:hover:before{
+	opacity: 1;
+}
+
+
 /* Typography */
 a,
 input[type="submit"],
 input[type="button"],
+.ba-section__product_item:before,
 button{
 	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
 	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
