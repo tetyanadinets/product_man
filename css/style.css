@@ -229,7 +229,7 @@ body{
 	left: 0;
 	right: 0;
 	visibility: hidden;
-	opasity: 0;
+	opacity: 0;
 	z-index: 1;
 	border-radius: 7px;
 	background-color: #e10011;
@@ -294,7 +294,9 @@ input[type="text"]{
 	background-size: 5%;
 	background-position: 25px 27px;
 }
-
+input:focus{
+	outline: none;
+}
 .ba-button{
 	border: 0;
 	color: #ffffff;
