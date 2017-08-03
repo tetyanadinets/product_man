@@ -1,3 +1,66 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+.ba-section__product_item:before,
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+
+
+
+
+
+
 body{
  	background-color: #ebebeb;
  	font-family: 'Roboto', sans-serif;
@@ -112,9 +175,12 @@ body{
 .ba-section__slider_navigator li.ba-active{
 	background-color: #e10011;
 }
+.ba-section__slider_navigator li:hover{
+	background-color: #e10011;
+}
 
 
-/*Section_2*/
+/*Section_white*/
 
 .ba-container__white{
 	background-color: #FFF;
@@ -133,7 +199,7 @@ body{
 }
 
 .ba-section__star:before, .ba-section__star:after{
-	content: "〰〰〰〰";
+	content: " 〰〰〰〰 ";
 	color: #5c5c5c;
 }
 .ba-section__text{
@@ -152,69 +218,141 @@ body{
 	margin-left: 0;
 }
 .ba-section__product_item{
+	background-color: #f4f6f1;
+	border-radius: 5px;
 	position: relative;
 }
-.ba-section__product_item:before{
-	content: "";
+.ba-section__overlay{
 	position: absolute;
-	background-color: #e10011;
 	top: 0;
+	bottom: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
-	opacity: 0;
-	display: block;
+	visibility: hidden;
+	opasity: 0;
+	z-index: 1;
+	border-radius: 7px;
+	background-color: #e10011;
+	transition: opacity .2s, visibility .2s;
+	color: #FFF;
 }
-.ba-section__product_item:hover:before{
+.ba-section__hover-text{
+	font-size: 30px;
+	font-weight: 900;
+	text-align: left;
+	margin-left: 38px;
+	margin-bottom: 68px;
+}
+.ba-section__hover-text:after{
+	content: '';
+	max-width: 100px;
+	height: 5px;
+	background-color: #FFF;
+	display: block;
+	margin-top: 5px;
+}
+
+.ba-section__product_item:hover .ba-section__overlay{
+	visibility: visible;
 	opacity: 1;
 }
 
-
-/* Typography */
-a,
-input[type="submit"],
-input[type="button"],
-.ba-section__product_item:before,
-button{
-	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+/*Section_subscribe*/
+.ba-section__subcribe-news{
+	margin: 0 auto;
 }
-input[type="submit"],
-input[type="button"],
-button,
+
+.ba-section__subcribe-news h3{
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+	font-size: 48px;
+	font-weight: 900;
+	padding-top: 30px;
+}
+.ba-section__subcribe{
+	max-width: 702px;
+	margin: 0 auto;
+}
+.ba-input{
+	font-size: 0;
+}
+input[type="text"]{
+	border: 0;
+	height: 70px;
+	font-family: 'Relaway', sans-serif;
+	color: #979797;
+	font-size: 18px;
+	font-weight: 600;
+	font-style: italic;
+	line-height: 24px;
+	text-align: left;
+	padding-left: 60px;
+	width: 70%;
+	border-radius: 50px 0 0 50px;
+	background-image: url(../img/inquiry.png);
+	background-repeat: no-repeat;
+	background-size: 5%;
+	background-position: 25px 27px;
+}
+
 .ba-button{
-	display: inline-block;
+	border: 0;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 900;
+	text-align: center;
+	height: 70px;
+	background-color: #e10011;
+	text-transform: uppercase;
+	width: 30%;
+	border-radius: 0 50px 50px 0;
 }
-input[type="submit"]:hover,
-input[type="button"]:hover,
-button:hover,
 .ba-button:hover{
-
+	background-color: #303030;
+}
+.ba-button span:after{
+	content: '';
+	border: 8px solid transparent;
+	border-left: 8px solid white;
+	display: inline-block;
+	margin-left: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="tel"],
-textarea,
-select {
-
-	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+/*Footer*/
+.ba-footer-container{
+	padding-top: 150px;
 }
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-textarea:focus,
-select:focus {
+.ba-footer__social{
+	background-color: #FFF;
+	border-radius: 50%;
+	padding: 5px;
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	padding: 19px;
+	margin: 10px;
+}
+.ba-footer__social:hover{
+	color: #FFF;
+	background-color: #303030;
+}
+.ba-footer__social i{
+	font-family: 'FontAwesome';
+	color: #979797;
+	font-size: 34px;
+	font-weight: 400;
+}
+.ba-footer__copy{
+	margin: 60px auto;
+	font-weight: 400;
+}
+.ba-footer__copy, .ba-footer__copy a{
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
 
 }
-textarea {
-
+.ba-footer__copy a{
+	color: #303030;
+	text-decoration: none;
+	font-weight: 600;
 }
